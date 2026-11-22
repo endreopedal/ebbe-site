@@ -1,5 +1,5 @@
 :root {
-  --tide: #2D4BFF; --glow: #C6F236; --sand: #F6F3EA; --foam: #FFFFFF; --ink: #111111; --ink-soft: #5B5D63; --kelp: #13803A; --stroke: #111111;
+  --tide: #F2400F; --tide-deep: #B02A04; --tide-soft: #FFEBE4; --sand: #FFFFFF; --foam: #F4F4F6; --ink: #111114; --ink-soft: #5F6168; --kelp: #12804A;
 }
 * { box-sizing: border-box; }
 body {
@@ -10,13 +10,13 @@ body {
 main { max-width: 680px; margin: 0 auto; padding: 32px 16px 64px; }
 header { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
 header a { color: var(--ink); text-decoration: none; font-weight: 700; font-size: 20px; font-family: ui-rounded, -apple-system, sans-serif; }
-.wave { width: 32px; height: 32px; border-radius: 6px; background: var(--tide); border: 2.5px solid var(--ink); box-shadow: 3px 3px 0 var(--ink); display: inline-block; }
-h1 { font-size: 40px; font-weight: 900; line-height: 1.05; margin: 8px 0 12px; letter-spacing: -0.5px; }
+.wave { width: 32px; height: 32px; border-radius: 10px; background: var(--tide); box-shadow: 0 6px 14px rgba(242,64,15,.35); display: inline-block; }
+h1 { color: var(--ink); font-size: 40px; font-weight: 900; line-height: 1.05; margin: 8px 0 12px; letter-spacing: -0.5px; }
 h2 { font-family: ui-rounded, -apple-system, sans-serif; font-size: 22px; margin-top: 32px; }
 p, li { color: var(--ink); }
 .lead { font-size: 20px; color: var(--ink-soft); }
-.card { background: var(--foam); border: 2px solid var(--ink); border-radius: 12px; padding: 18px 22px; margin: 16px 0; box-shadow: 4px 4px 0 var(--ink); }
-a { color: var(--tide); font-weight: 700; }
-mark { background: var(--glow); padding: 0 4px; border: 1.5px solid var(--ink); border-radius: 4px; }
+.card { background: var(--foam); border-radius: 20px; padding: 18px 22px; margin: 16px 0; }
+a { color: var(--tide-deep); font-weight: 700; }
+mark { background: var(--tide-soft); color: var(--tide-deep); padding: 0 6px; border-radius: 999px; }
 nav.links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 40px; font-size: 15px; }
 footer { margin-top: 48px; font-size: 14px; color: var(--ink-soft); }

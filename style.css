@@ -1,23 +1,28 @@
 :root {
-  --tide: #1F5F6B; --sand: #F4EFE6; --foam: #FFFFFF; --ink: #1E2A2E; --ink-soft: #5B6A6E; --kelp: #3E8E6E;
+  --tide: #00A39A; --glow: #3D5AFE; --sand: #F2F5F9; --foam: #FFFFFF; --ink: #0B1320; --ink-soft: #5A6A80; --kelp: #13A55A; --stroke: #E3E9F1;
 }
 @media (prefers-color-scheme: dark) {
-  :root { --tide: #6FB3BF; --sand: #1C1B19; --foam: #262624; --ink: #ECE7DD; --ink-soft: #A7A39A; --kelp: #5FB08F; }
+  :root { --tide: #35F2D2; --glow: #5C8DFF; --sand: #060B14; --foam: #0F1A2A; --ink: #F1F5FA; --ink-soft: #8FA2BC; --kelp: #46E38A; --stroke: #1C2A3F; }
 }
 * { box-sizing: border-box; }
 body {
-  margin: 0; background: var(--sand); color: var(--ink);
+  margin: 0; color: var(--ink);
+  background: radial-gradient(600px 400px at 10% -5%, color-mix(in srgb, var(--tide) 22%, transparent), transparent),
+              radial-gradient(700px 500px at 100% 105%, color-mix(in srgb, var(--glow) 16%, transparent), transparent),
+              var(--sand);
+  background-attachment: fixed; min-height: 100vh;
   font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, sans-serif;
 }
 main { max-width: 680px; margin: 0 auto; padding: 32px 16px 64px; }
 header { display: flex; align-items: center; gap: 10px; margin-bottom: 24px; }
 header a { color: var(--ink); text-decoration: none; font-weight: 700; font-size: 20px; font-family: ui-rounded, -apple-system, sans-serif; }
-.wave { width: 32px; height: 32px; border-radius: 9px; background: var(--tide); display: inline-block; }
-h1 { font-family: ui-rounded, -apple-system, sans-serif; font-size: 34px; line-height: 1.15; margin: 8px 0 12px; }
+.wave { width: 32px; height: 32px; border-radius: 10px; background: linear-gradient(135deg, var(--tide), var(--glow)); display: inline-block; box-shadow: 0 6px 18px color-mix(in srgb, var(--tide) 45%, transparent); }
+h1 { font-family: ui-rounded, -apple-system, sans-serif; font-size: 38px; font-weight: 800; line-height: 1.1; margin: 8px 0 12px;
+     background: linear-gradient(135deg, var(--tide), var(--glow)); -webkit-background-clip: text; background-clip: text; color: transparent; }
 h2 { font-family: ui-rounded, -apple-system, sans-serif; font-size: 22px; margin-top: 32px; }
 p, li { color: var(--ink); }
 .lead { font-size: 20px; color: var(--ink-soft); }
-.card { background: var(--foam); border-radius: 18px; padding: 18px 20px; margin: 16px 0; }
+.card { background: var(--foam); border: 1px solid var(--stroke); border-radius: 24px; padding: 18px 22px; margin: 16px 0; box-shadow: 0 6px 24px rgba(0,0,0,.06); }
 a { color: var(--tide); }
 nav.links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 40px; font-size: 15px; }
 footer { margin-top: 48px; font-size: 14px; color: var(--ink-soft); }
